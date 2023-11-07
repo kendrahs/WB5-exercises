@@ -36,33 +36,29 @@ let courses = [
     Fee: "50.00",
     }
    ];
-console.log(prog200courseDate);
+
 // When does the PROG200 course start?
-
-// function IsProg200(course){
-//     return course.CourseId == "PROG200";
-// }
-
-
-// let prog200course = courses.find(IsProg200);
-
-// let prog200course = courses.find(function(course){
-//     return course.CourseId == "PROG200";
-// });
-
-let prog200courseDate = courses.find( (course) => course.CourseId == "PROG200").StartDate;
-
-
-
-console.log(prog200courseDate);
-
+function courseStart(courseId) {
+        const course = courses.find(course => course.CourseId === courseId);
+        if (course) {
+        return course.StartDate;
+    }
+}
+                                  //another way
+let prog200Course = courses.find((course) => course.CourseId === "PROG200")
+console.log(prog200Course.StartDate)
 
 
 // What is the title of the PROJ500 course?
 console.log(" What is the title of the PROJ500 course?")
-console.log(courses.find((course) => course.CourseId == "PROJ500").Title);
+console.log(courses.find((course) => course.CourseId == "PROJ500").Title); //title search
+
 
 
 // What are the titles of the courses that cost $50 or less?
+console.log(" Which courses cost $50 or less?")
+
+
+
 // What classes meet in "Classroom 1"?
    
